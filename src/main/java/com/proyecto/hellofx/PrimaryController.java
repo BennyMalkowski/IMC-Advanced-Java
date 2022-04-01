@@ -66,11 +66,10 @@ public class PrimaryController implements Initializable {
 
             if ((altura > ALTURAMIN && altura < ALTURATOP) && (peso > PESOMIN && peso < PESOTOP)) {
                 IMC = peso / (altura * altura);
-                
+
                 grupoBotones(IMC);
                 etiquetaResultado.setText(String.format("%.2f", IMC));
                 calcularIMC(IMC);
-                
 
             } else {
                 etiquetaResultado.setText("ERROR");
@@ -81,7 +80,6 @@ public class PrimaryController implements Initializable {
             info = "Error";
         }
 
-//        etiquetaResultado.setText(info);
     }
 
     public void calcularIMC(double IMC) {
@@ -115,46 +113,19 @@ public class PrimaryController implements Initializable {
 
     private void grupoBotones(double resultado) {
         if (resultado > OBESIDAD) {
-//            botonRadioObesidad.setSelected(true);
-//            botonRadioDelgadez.setSelected(false);
-//            botonRadioNormal.setSelected(false);
-//            botonRadioSobrepeso.setSelected(false);
-//            botonRadioObesidad.isSelected();
-
             listPesos.getSelectionModel().select(0);
+            
         } else if (resultado > SOBREPESOMIN && resultado < SOBREPESOTOP) {
-//            botonRadioObesidad.setSelected(false);
-//            botonRadioDelgadez.setSelected(false);
-//            botonRadioNormal.setSelected(false);
-//            botonRadioSobrepeso.setSelected(true);
-//            botonRadioSobrepeso.isSelected();
-
             listPesos.getSelectionModel().select(1);
 
         } else if (resultado > NORMALMIN && resultado < NORMALTOP) {
-//            botonRadioObesidad.setSelected(false);
-//            botonRadioDelgadez.setSelected(false);
-//            botonRadioNormal.setSelected(true);
-//            botonRadioSobrepeso.setSelected(false);
-//            botonRadioNormal.isSelected();
-
             listPesos.getSelectionModel().select(2);
+            
         } else if (resultado < DELGADEZ) {
-//            botonRadioObesidad.setSelected(false);
-//            botonRadioDelgadez.setSelected(true);
-//            botonRadioNormal.setSelected(false);
-//            botonRadioSobrepeso.setSelected(false);
-
             listPesos.getSelectionModel().select(3);
+            
         }
     }
-//    
-//    public void lista(String IMC){
-//     
-//     
-//    
-//     
-//    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -174,7 +145,6 @@ public class PrimaryController implements Initializable {
         String seleccionado = pesos.get(pesoSeleccionado);
 
         // MARCAMOS LO SELECCIONADO
-//    listPesos.setText(seleccionado);
         listPesos.getSelectionModel().select(pesoSeleccionado);
 
     }
