@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="455.0" prefWidth="639.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.hellofx.PrimaryController">
+   <children>
+      <Pane prefHeight="476.0" prefWidth="663.0" styleClass="fondo" stylesheets="@myCSS.css">
+         <children>
+            <Button fx:id="botonCalcular" layoutX="217.0" layoutY="186.0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="25.0" prefWidth="166.0" styleClass="cajas2" stylesheets="@myCSS.css" text="CALCULAR IMC" textFill="WHITE" />
+            <TextField fx:id="etiquetaAltura" alignment="CENTER" editable="false" layoutX="63.0" layoutY="284.0" prefHeight="37.0" prefWidth="79.0" promptText="Altura" styleClass="cajas" stylesheets="@myCSS.css" />
+            <TextField fx:id="etiquetaPeso" alignment="CENTER" editable="false" layoutX="63.0" layoutY="328.0" prefHeight="37.0" prefWidth="79.0" promptText="Peso" styleClass="cajas" stylesheets="@myCSS.css" />
+            <Text layoutX="34.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Altura cm" />
+            <Text layoutX="38.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso Kg" />
+            <TextField fx:id="etiquetaResultado" alignment="CENTER" layoutX="150.0" layoutY="285.0" prefHeight="79.0" prefWidth="166.0" styleClass="cajas" stylesheets="@myCSS.css">
+               <font>
+                  <Font size="30.0" />
+               </font></TextField>
+            <Text fill="#313f43" layoutX="152.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ÍNDICE DE MASA CORPORAL">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Line endX="245.60003662109375" fill="#313f43e3" layoutX="300.0" layoutY="234.0" startX="-244.00001525878906" stroke="#313f43" />
+            <Slider fx:id="sliderAltura" layoutX="112.0" layoutY="41.0" majorTickUnit="20.0" max="220.0" min="40.0" prefHeight="14.0" prefWidth="424.0" showTickLabels="true" showTickMarks="true" styleClass="textoBlanco" stylesheets="@../../../../../com.proyecto_BaseJavaFX_jar_1.0-SNAPSHOT_2/src/main/resources/com/proyecto/hellofx/myCSS.css" value="170.0" />
+            <Slider fx:id="sliderPeso" layoutX="113.0" layoutY="124.0" majorTickUnit="20.0" max="180.0" min="20.0" prefHeight="37.0" prefWidth="424.0" showTickLabels="true" showTickMarks="true" value="70.0" />
+            <ListView fx:id="listPesos" layoutX="325.0" layoutY="265.0" mouseTransparent="true" prefHeight="99.0" prefWidth="212.0" />
+         </children>
+      </Pane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
